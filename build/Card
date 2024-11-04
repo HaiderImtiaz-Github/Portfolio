@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Haider Imtiaz</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="static/assets-card/css/main.css" />
+    <link rel="stylesheet" href="static/assets-card/css/for_email.css" />
+</head>
+<body class="is-loading">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <section id="main">
+        <header>
+            <span class="avatar"><img src="static/images/avatar.jpg" alt="" /></span>
+            <h1>Haider Imtiaz</h1>
+            <p>Python Developer</p>
+        </header>
+
+        <footer>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/haider-imtiaz-12158b137/" class="fab fa-linkedin">LinkedIn</a></li>
+                <li><a href="#" id="email-icon" class="fas fa-envelope">Email</a></li>
+                <li><a href="static/CV/Haider Imtiaz.pdf" download class="fa fa-download">Download CV</a></li>
+            </ul>
+        </footer>
+    </section>
+
+    <!-- Contact Card Popup -->
+    <div id="contact-card" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h1>Contact Me</h1>
+            <div class="contact-info">
+                <p>Email me at: <a href="mailto:haider.imtiaz38@ee.ceme.edu.pk" class="email-link">haider.imtiaz38@ee.ceme.edu.pk</a></p>
+                <p>Phone: <a href="tel:+923445185990">+92 344 5185990</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; Haider Imtiaz</li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script>
+    if ('addEventListener' in window) {
+        window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+        document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+
+    document.getElementById('email-icon').addEventListener('click', function() {
+        var contactCard = document.getElementById('contact-card');
+        contactCard.classList.add('show');
+    });
+
+    document.getElementById('close-popup').addEventListener('click', function() {
+        var contactCard = document.getElementById('contact-card');
+        contactCard.classList.remove('show');
+    });
+
+    window.addEventListener('click', function(event) {
+        var contactCard = document.getElementById('contact-card');
+        if (event.target == contactCard) {
+            contactCard.classList.remove('show');
+        }
+    });
+</script>
+
+</body>
+</html>
